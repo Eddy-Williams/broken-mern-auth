@@ -10,6 +10,7 @@ class Login extends Component {
     super();
     this.state = {
       email: "",
+      password: "",
       errors: {}
     };
   }
@@ -127,11 +128,11 @@ class Login extends Component {
 Login.propTypes = {
   loginUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequire
+  errors: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  auth: state.auth
+  auth: state.auth,
   errors: state.errors
 });
 
