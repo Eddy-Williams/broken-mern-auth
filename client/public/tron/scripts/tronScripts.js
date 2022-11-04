@@ -8,8 +8,6 @@ help.addEventListener('click', () => {
   instructions.style.visibility = 'visible'
 })
 
-console.log("This is a test")
-
 
 class Player {
     constructor(x, y, colour){

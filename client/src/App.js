@@ -17,6 +17,7 @@ import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 
 import Tron from "./components/projects/Tron"
+import CompVision from "./components/projects/CompVision";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -43,13 +44,14 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            <Navbar />
+            {/* <Navbar /> */}
             <Route exact path="/" component={Landing} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <PrivateRoute exact path="/tron" component={Tron} />
+              <PrivateRoute exact path="/compvision" component={CompVision} />
             </Switch>
           </div>
         </Router>

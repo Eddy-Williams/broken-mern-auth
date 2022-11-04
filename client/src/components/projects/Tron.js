@@ -1,16 +1,17 @@
 import React, { Component } from "react";
+import Navbar from "../layout/Navbar";
+
 
 class Tron extends Component {
     render() {
       return (
+        <div><Navbar />
         <div id="stretchFrame">
-          <iframe id="magicFrame"src="broken-mern-auth/client/src/components/projects/tronindex.html" width="100%" height="100%"></iframe>
+            <iframe id="magicFrame" src="./tron/tronindex.html" title="trongame"></iframe>
   
-        </div>
+        </div></div>
       );
     }
   }
   
-  
-  
-  export default Tron;
+export default Tron;

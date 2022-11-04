@@ -2,6 +2,23 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 class Navbar extends Component {
+  test() {
+    const pathname = window.location.pathname;
+
+    if (pathname !== "/login" || pathname !== "/register" || pathname !== "/") {
+      return (
+        <Link
+        to="/dashboard"
+        style={{
+          fontFamily: "monospace"
+        }}
+        className="col s5 brand-logo left black-text"
+      >
+        Back
+      </Link>
+      );
+    }
+  }
   render() {
     return (
       <div className="navbar-fixed">
@@ -17,6 +34,7 @@ class Navbar extends Component {
               <i className="material-icons">local_fire_department</i>
               Portal
             </Link>
+              {this.test()}
           </div>
         </nav>
       </div>
